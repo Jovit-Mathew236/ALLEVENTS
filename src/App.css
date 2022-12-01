@@ -181,3 +181,9 @@ table select {
     height: 100;
   }
 }
+
+.head{
+  display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
