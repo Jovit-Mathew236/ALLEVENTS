@@ -24,6 +24,8 @@ class AsthraApp extends React.Component {
             // console.log(snapshot.data());
             if (snapshot.exists) {
                 this.setState({ data: snapshot.data() });
+            } else {
+                Firebase.auth().signOut()
             }
             // this.setState({ data: snapshot.data() });
             // this.setState({ data: { user_role: 'admin' } });
