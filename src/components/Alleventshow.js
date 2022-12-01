@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './../App.css'
 import axios from "axios";
 import { Firebase } from '../firebase/config';
 import { useParams } from 'react-router';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 const Alleventshow = () => {
     const { code } = useParams()
     const [info, setInfo] = useState([])
     const [eventAPI, setEventAPI] = useState([])
+    const tableRef = useRef(null);
+let fileName = ''
 
 
     useEffect(() => {
@@ -65,6 +68,7 @@ const Alleventshow = () => {
                             // console.log(data.code)
                             if (code === data.code) {
                                 // console.log(data.name);
+                                fileName = data.name
                                 return (
                                     // to={`../sjcet/${eventCode}`}
                                     <h1 key={index}>{data.name}</h1>
@@ -74,7 +78,7 @@ const Alleventshow = () => {
                     }
                     <p>Count : {info.length}</p>
                 </div>
-                <table>
+                <table ref={tableRef}>
                     <thead>
                         <tr>
                             <th>No</th>
@@ -103,6 +107,11 @@ const Alleventshow = () => {
                         }
                     </tbody>
                 </table>
+                <div className="exel_btn_sec">
+                    <DownloadTableExcel filename={fileName} sheet="users" currentTableRef={tableRef.current} className="exel_btn">
+                        <button className="exel_btn"> Export excel </button>
+                    </DownloadTableExcel>
+                </div>
 
             </div>
         </div>

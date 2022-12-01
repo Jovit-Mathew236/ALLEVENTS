@@ -187,3 +187,18 @@ table select {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.exel_btn{
+  margin: auto;
+  background-color: #00b900;
+  color: white;
+  padding: 20px 30px;
+cursor: pointer;
+}
+.exel_btn_sec{
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
