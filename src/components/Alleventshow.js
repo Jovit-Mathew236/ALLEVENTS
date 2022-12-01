@@ -109,7 +109,7 @@ let fileName = ''
                 </table>
                 <div className="exel_btn_sec">
                     <DownloadTableExcel filename={fileName} sheet="users" currentTableRef={tableRef.current} className="exel_btn">
-                        <button className="exel_btn"> Export excel </button>
+                        <button className="exel_btn"> Export to excel </button>
                     </DownloadTableExcel>
                 </div>
 
