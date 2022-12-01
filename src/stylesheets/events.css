@@ -1,0 +1,104 @@
+.table_container {
+    background-color: rgba(40, 40, 40);
+    min-height: calc(100vh - 50px);
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.table_container table {
+    background: rgba(255, 255, 255, 0.0001);
+    width: 100%;
+    text-align: center;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.sync-btn {
+    padding: 20px 60px;
+    font-size: 20px;
+    font-weight: 800;
+    background: #a5dc86;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+table,
+th,
+td {
+    background: rgba(255, 255, 255, 0.002);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #5B5B5B;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+table input,
+table select {
+    color: white;
+    width: calc(100% - 20px);
+    background: #6a6a6a;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.form {
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 0;
+    background: #575ce5;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+
+.form .Input_filed {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.form .Input_filed input {
+    color: rgb(0, 0, 0);
+    /* width: calc(100% - 20px); */
+    background: #f0f0f0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.form .submit_btn {
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background: #00cf00;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.form .submit_btn:hover {
+    background: #00b900;
+}
+
+@media only screen and (max-width: 500px) {
+    .table_container {
+        width: 100vh;
+        height: 100;
+    }
+}
