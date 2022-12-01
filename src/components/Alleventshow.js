@@ -59,8 +59,20 @@ const Alleventshow = () => {
         <div>
             <div className="table_container">
                 <div className="head">
-                    <h1>{code}</h1>
-                    <p>{info.length}</p>
+                    {
+                        eventAPI.map((data, index) => {
+
+                            // console.log(data.code)
+                            if (code === data.code) {
+                                // console.log(data.name);
+                                return (
+                                    // to={`../sjcet/${eventCode}`}
+                                    <h1 key={index}>{data.name}</h1>
+                                )
+                            }
+                        })
+                    }
+                    <p>Count : {info.length}</p>
                 </div>
                 <table>
                     <thead>
@@ -79,7 +91,7 @@ const Alleventshow = () => {
                                 // console.log(data)
                                 return (
                                     <tr key={index}>
-                                        <td>{index+1}</td>
+                                        <td>{index + 1}</td>
                                         <td>{data.name}</td>
                                         <td>{data.event}</td>
                                         <td>{data.college}</td>
