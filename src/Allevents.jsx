@@ -12,14 +12,16 @@ import './stylesheets/App.css';
 
 const Allevents = () => {
     const [margin, setMargin] = useState(null)
+    const [transform, setTransform] = useState(null)
     const user_data = useContext(UserContext)
 
     return (
         <>
             <div className="admin_panel">
                 <div className="container">
-                    <button className="menu_btn" onClick={() => {
+                    <button style={{ transform: `rotate(${transform + "deg"})` }} className="menu_btn" onClick={() => {
                         setMargin(margin === -120 ? -10 : -120)
+                        setTransform(transform === 180 ? 90 : 180)
                     }}><Menu /> </button>
                     <div className="admin_left_section" style={{ marginLeft: margin }}>
                         <div className="upper-btns">

@@ -112,27 +112,40 @@
 }
 
 
-
 .menu_btn {
   position: absolute;
+  top: 0;
+  right: 0;
   padding: 2px 9px;
   display: none;
   z-index: 11;
-  background: transparent;
+  background: white;
+  border-radius: 50%;
   border: none;
   height: 40px;
   width: 50px;
-
+  transform: rotate(180deg);
+  transition: 2s ease;
 }
 
 /* responsive */
 
 @media only screen and (max-width : 500px) {
+  .container .admin_right_section {
+    margin-left: 0px;
+  }
+
   .admin_panel .container .admin_left_section {
     margin-left: -120px;
     position: absolute;
     height: 95%;
     z-index: 10;
+    border: 2px solid #575ce5;
+    box-shadow: 0px 0px 4px 0px #0000004d;
+  }
+
+  .card_container {
+    width: unset;
   }
 
   .admin_panel .container .admin_left_section:hover {
