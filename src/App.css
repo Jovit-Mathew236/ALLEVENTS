@@ -195,6 +195,7 @@ table select {
   color: white;
   padding: 20px 30px;
   cursor: pointer;
+  border: none;
 }
 
 .exel_btn_sec {
