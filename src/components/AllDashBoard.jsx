@@ -33,7 +33,12 @@ const AllDashBoard = () => {
       console.error(error);
     });
   }, [setEventAPI])
-
+  function DeptName(code) {
+    let data = {
+      "MEC": "Mechaura - Mechanical Engineering", "RAD": "Radiance - Computer Science and Engineering", "AAK": "Aakrti - Civil Engineering", "SPE": "Spectra - Electronics and Communication Engineering", "EME": "Emerge - Electrical and Electronics Engineering", "YAN": "Yanthrika - Applied Electronics and Instrumentation", "AZT": "Aztec Allure - Artificial Intelligence and Data Science", "CRE": "Pandora - Electronics and Computer Science", "TRI": "Trilok - Master of Business Administration", "FEN": "Fenstra - Master of Computer Applications", "GEN": "General", "INF": "Informal"
+    }
+    return data[code.substring(3, 6)]
+  }
 
   return (
     <div className='eventdash'>
@@ -47,6 +52,7 @@ const AllDashBoard = () => {
             <NavLink to={`../events/${data.code}`} key={index}>
               <div key={index} className="card" style={{ background: "orange" }}>
                 <p className="event_name">{data.name}</p>
+                <p className="dept_card"> {DeptName(data.code)}</p>
               </div>
             </NavLink>
           )
