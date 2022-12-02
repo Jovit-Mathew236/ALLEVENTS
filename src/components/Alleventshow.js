@@ -82,6 +82,7 @@ let fileName = ''
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Day</th>
                             <th>Name</th>
                             <th>Event</th>
                             <th>College</th>
@@ -96,6 +97,7 @@ let fileName = ''
                                 return (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
+                                        <td>{data.day === "Day 2" ? data.day : null}</td>
                                         <td>{data.name}</td>
                                         <td>{data.event}</td>
                                         <td>{data.college}</td>
