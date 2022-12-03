@@ -81,13 +81,13 @@ let fileName = ''
                 <table ref={tableRef}>
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Day</th>
-                            <th>Name</th>
-                            <th>Event</th>
-                            <th>College</th>
-                            <th>Email</th>
-                            <th>Phone</th>
+                            <th>SI. No.</th>
+                            <th>Participant Full Name</th>
+                            <th>FULL College/Institution name of participant</th>
+                            <th>Email ID of Participant</th>
+                            {/* <th>Event Type</th> */}
+                            <th>Event / Workshop Full Name</th>
+                            <th>Date of Event <br /> (dd-mm-yy)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -97,12 +97,12 @@ let fileName = ''
                                 return (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
-                                        <td>{data.day === "Day 2" ? data.day : null}</td>
                                         <td>{data.name}</td>
-                                        <td>{data.event}</td>
                                         <td>{data.college}</td>
                                         <td>{data.email}</td>
-                                        <td>{data.phone}</td>
+                                        {/* <td>{data.event_type}</td> */}
+                                        <td>{data.event}</td>
+                                        <td>{data.day === "Day 2" ? "02-12-22" : "01-12-22"}</td>
                                     </tr>
                                 )
                             })
