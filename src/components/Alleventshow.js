@@ -11,6 +11,7 @@ const Alleventshow = () => {
     const [eventAPI, setEventAPI] = useState([])
     const tableRef = useRef(null);
 let fileName = ''
+let eventType = ''
 
 
     useEffect(() => {
@@ -69,6 +70,7 @@ let fileName = ''
                             if (code === data.code) {
                                 // console.log(data.name);
                                 fileName = data.name
+                                eventType = data.event_type
                                 return (
                                     // to={`../sjcet/${eventCode}`}
                                     <h1 key={index}>{data.name}</h1>
@@ -85,7 +87,7 @@ let fileName = ''
                             <th>Participant Full Name</th>
                             <th>FULL College/Institution name of participant</th>
                             <th>Email ID of Participant</th>
-                            {/* <th>Event Type</th> */}
+                            <th>Event Type</th>
                             <th>Event / Workshop Full Name</th>
                             <th>Date of Event <br /> (dd-mm-yy)</th>
                         </tr>
@@ -100,7 +102,7 @@ let fileName = ''
                                         <td>{data.name}</td>
                                         <td>{data.college}</td>
                                         <td>{data.email}</td>
-                                        {/* <td>{data.event_type}</td> */}
+                                        <td>{eventType}</td>
                                         <td>{data.event}</td>
                                         <td>{data.day === "Day 2" ? "02-12-22" : "01-12-22"}</td>
                                     </tr>

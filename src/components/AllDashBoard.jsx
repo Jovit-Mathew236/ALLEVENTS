@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { UserContext } from '../context'
+import React, {  useEffect, useState } from 'react'
+// import { UserContext } from '../context'
 import axios from "axios";
 import './../App.css'
 // import { Firebase } from './../firebase/config';
@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 const AllDashBoard = () => {
   const [eventAPI, setEventAPI] = useState([])
-  const user_data = useContext(UserContext)
+  // const user_data = useContext(UserContext)
   // const [info, setInfo] = useState([])
 
   useEffect(() => {
@@ -33,6 +33,8 @@ const AllDashBoard = () => {
       console.error(error);
     });
   }, [setEventAPI])
+
+
   function DeptName(code) {
     let data = {
       "MEC": "Mechaura - Mechanical Engineering", "RAD": "Radiance - Computer Science and Engineering", "AAK": "Aakrti - Civil Engineering", "SPE": "Spectra - Electronics and Communication Engineering", "EME": "Emerge - Electrical and Electronics Engineering", "YAN": "Yanthrika - Applied Electronics and Instrumentation", "AZT": "Aztec Allure - Artificial Intelligence and Data Science", "CRE": "Pandora - Electronics and Computer Science", "TRI": "Trilok - Master of Business Administration", "FEN": "Fenstra - Master of Computer Applications", "GEN": "General", "INF": "Informal"
