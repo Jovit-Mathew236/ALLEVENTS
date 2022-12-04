@@ -45,7 +45,7 @@ body {
 }
 
 .card_container {
-  width: 80%;
+  /* width: 80%; */
   /* height: 80%; */
   margin: auto;
   display: flex;
@@ -83,9 +83,9 @@ a {
 .table_container {
   background-color: rgba(40, 40, 40);
   min-height: calc(100vh - 50px);
-  width: 95%;
-  margin: 10px auto;
-  border-radius: 10px;
+  /* width: 95%; */
+  /* margin: 10px auto;
+  border-radius: 10px; */
   position: relative;
 }
 
@@ -180,7 +180,7 @@ table select {
 
 @media only screen and (max-width: 500px) {
   .table_container {
-    width: 100vh;
+    width: 150vh;
     height: 100;
   }
 }
@@ -201,11 +201,11 @@ table select {
 }
 
 .exel_btn_sec {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  padding: 40px;
 }
 
 .dept_card{

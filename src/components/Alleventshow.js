@@ -31,7 +31,7 @@ let eventType = ''
         }).catch((e) => {
             console.log(e.message);
         })
-    }, [Firebase, setInfo])
+    }, [setInfo,code])
 
 
     useEffect(() => {
@@ -76,6 +76,7 @@ let eventType = ''
                                     <h1 key={index}>{data.name}</h1>
                                 )
                             }
+                            return null
                         })
                     }
                     <p>Count : {info.length}</p>
